@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- NAVIGATION -->
-    <nav class="top-navigation">
+    <nav class="top-navigation" id="navigation">
         <div class="wrapper">
             <div class="nav-brand">
                 <a class="logo-link" href="#"><img class="img-responsive" src="./img/logo.png" alt="Logo formado por elipses solapadas"></a>
@@ -23,62 +23,130 @@
             </div>
             
             <ul class="nav-links">
-                <li><a class="nav-link active" href="#work">Work</a></li>
-                <li><a class="nav-link" href="#about">About</a></li>
-                <li><a class="nav-link" href="#contact">Contact</a></li>
+                <li><a id="work_link" class="nav-link active">Work</a></li>
+                <li><a id="about_link" class="nav-link">About</a></li>
+                <li><a id="contact_link" class="nav-link">Contact</a></li>
             </ul>
         </div>
         
     </nav>
 
-    <div class="wrapper">    
+    <div class="wrapper">
         <!-- INTRO SECTION -->
         <div class="intro">
             &#128075;
             <p><span class="highlight">Diseñador UX</span> con ámplios conocimientos en programación web. Situar al usuario como foco del diseño y asegurar una experiencia placentera son pilares esenciales en mis diseños.</p>
         </div>
+    </div>
 
+    <div class="wrapper">    
         <!-- WORK SECTION -->
+        <h2 class="heading">Projects</h2>
+
         <div class="projects-grid" id="projects">
             <div class="project" 
-                style="--aspect-ratio: 1/1; background-image: url(./img/dashboard.jpg);">
-                <a class="title" href="#">
-                    <!-- <span>Coinfy: Consistency</span> -->
+                style="background-image: url(./img/dashboard.jpg);">
+                <a class="stretched-link" href="#1">
+                    <div class="project-heading">
+                        <span class="title">Coinfy: Consistency</span>
+                        <p class="description">Explore the uses of consistency in the process of designing UX</p>
+                    </div>
                 </a>
+                <div class="overlay"></div>
             </div>
             <div class="project" 
-                style="--aspect-ratio: 1/1; background-image: url(./img/lightbulb.jpg);">
-                <a class="title" href="#">
-                    <!-- <span>Coinfy: Consistency</span> -->
+                style="background-image: url(./img/lightbulb.jpg);">
+                <a class="stretched-link" href="#2">
+                    <div class="project-heading">
+                        <span class="title">Energoal</span>
+                        <p class="description">User-Centered Design / Advanced UX/UI</p>
+                    </div>
                 </a>
+                <div class="overlay"></div>
             </div>
             <div class="project" 
-                style="--aspect-ratio: 1/1; background-image: url(./img/media.jpg);">
-                <a class="title" href="#">
-                    <!-- <span>Coinfy: Consistency</span> -->
+                style="background-image: url(./img/media.jpg);">
+                <a class="stretched-link" href="#3">
+                    <div class="project-heading">
+                        <span class="title">Medycal</span>
+                        <p class="description">The importance of usability in a modern user interface</p>
+                    </div>
                 </a>
+                <div class="overlay"></div>
             </div>
             <div class="project" 
-                style="--aspect-ratio: 1/1; background-image: url(./img/analytics.jpg);">
-                <a class="title" href="#">
-                    <!-- <span>Coinfy: Consistency</span> -->
+                style="background-image: url(./img/analytics.jpg);">
+                <a class="stretched-link" href="#4">
+                    <div class="project-heading">
+                        <span class="title">Blog: Analytics</span>
+                        <p class="description">Learn how to enhance your UX Design process with analytics</p>
+                    </div>
                 </a>
+                <div class="overlay"></div>
             </div>
             <div class="project" 
-                style="--aspect-ratio: 1/1; background-image: url(./img/graphics.jpg);">
-                <a class="title" href="#">
-                    <!-- <span>Coinfy: Consistency</span> -->
+                style="background-image: url(./img/graphics.jpg);">
+                <a class="stretched-link" href="#5">
+                    <div class="project-heading">
+                        <span class="title">Remednum</span>
+                        <p class="description">A well designed UI focused on data and performance</p>
+                    </div>
                 </a>
+                <div class="overlay"></div>
             </div>
             <div class="project" 
-                style="--aspect-ratio: 1/1; background-image: url(./img/geometry.jpg);">
-                <a class="title" href="#">
-                    <!-- <span>Coinfy: Consistency</span> -->
+                style="background-image: url(./img/geometry.jpg);">
+                <a class="stretched-link" href="#6">
+                    <div class="project-heading">
+                        <span class="title"> Video: Futuremet</span>
+                        <p class="description">Public talk about designing UX for accesibility and equity</p>
+                    </div>
                 </a>
+                <div class="overlay"></div>
             </div>
         </div>         
-
     </div>
+
+    <section class="about-section" id="about">
+        <div class="wrapper">
+            <h2 class="heading">About</h2>
+
+            <div class="about-grid">
+                <div class="picture-area">
+                    <img class="img-responsive picture" src="./img/IMG_20210805_180704.jpg" alt="">
+                </div>
+                <div class="info-area">
+                    <h3>Diego Villaverde</h3>
+                    <p>Diseñador UX con ámplios conocimientos en programación web. Situar al usuario como foco del diseño y asegurar una experiencia placentera son pilares esenciales en mis diseños.</p>
+                </div>
+                <div class="details-area">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et gravida leo. Morbi ultricies dui in enim iaculis, eget laoreet quam porttitor. Morbi velit lorem, fermentum vitae blandit eu, viverra nec tortor. Nam vel nisl id magna hendrerit tincidunt et et orci. Ut sit amet condimentum est. Phasellus scelerisque tempor dolor, in pellentesque lorem. Vestibulum posuere congue ultricies. Morbi a pellentesque nibh, sit amet efficitur odio. Sed mollis ligula quis laoreet suscipit. Cras mollis, dolor in facilisis ultrices, orci quam venenatis eros, ut congue mauris urna vel odio. Nunc volutpat ut tellus a rhoncus. Maecenas ac magna mollis, laoreet arcu iaculis, varius enim. Duis quis turpis mollis, fringilla orci non, aliquam arcu. Suspendisse malesuada condimentum velit, pulvinar lacinia metus accumsan eu. 
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="wrapper">
+            <h2 class="heading">Contact</h2>
+
+            <div class="about-grid">
+                <div class="picture-area">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et gravida leo. Morbi ultricies dui in enim iaculis, eget laoreet quam porttitor. Morbi velit lorem, fermentum vitae blandit eu, viverra nec tortor. Nam vel nisl id magna hendrerit tincidunt et et orci. Ut sit amet condimentum est. Phasellus scelerisque tempor dolor, in pellentesque lorem. Vestibulum posuere congue ultricies. Morbi a pellentesque nibh, sit amet efficitur odio. Sed mollis ligula quis laoreet suscipit. Cras mollis, dolor in facilisis ultrices, orci quam venenatis eros, ut congue mauris urna vel odio. Nunc volutpat ut tellus a rhoncus. Maecenas ac magna mollis, laoreet arcu iaculis, varius enim. Duis quis turpis mollis, fringilla orci non, aliquam arcu. Suspendisse malesuada condimentum velit, pulvinar lacinia metus accumsan eu. 
+                </div>
+                <div class="info-area">
+                    <p>Diseñador UX con ámplios conocimientos en programación web. Situar al usuario como foco del diseño y asegurar una experiencia placentera son pilares esenciales en mis diseños.</p>
+                </div>
+                <div class="details-area">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et gravida leo. Morbi ultricies dui in enim iaculis, eget laoreet quam porttitor. Morbi velit lorem, fermentum vitae blandit eu, viverra nec tortor. Nam vel nisl id magna hendrerit tincidunt et et orci. Ut sit amet condimentum est. Phasellus scelerisque tempor dolor, in pellentesque lorem. Vestibulum posuere congue ultricies. Morbi a pellentesque nibh, sit amet efficitur odio. Sed mollis ligula quis laoreet suscipit. Cras mollis, dolor in facilisis ultrices, orci quam venenatis eros, ut congue mauris urna vel odio. Nunc volutpat ut tellus a rhoncus. Maecenas ac magna mollis, laoreet arcu iaculis, varius enim. Duis quis turpis mollis, fringilla orci non, aliquam arcu. Suspendisse malesuada condimentum velit, pulvinar lacinia metus accumsan eu. 
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="wrapper">
