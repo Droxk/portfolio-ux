@@ -21,6 +21,13 @@ visualViewport.onresize = function() {
 // Asignacion de eventos
 navigation.addEventListener('click', function (event) {
 
+    
+    if (event.target.matches('#name_link')) {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    if (event.target.matches('#logo_link')) {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
     if (event.target.matches('#work_link')) {
         projects_grid.scrollIntoView({ behavior: 'smooth', block: 'end'});
     }
