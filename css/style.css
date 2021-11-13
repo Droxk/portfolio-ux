@@ -176,7 +176,7 @@ a {
     width: 1px;
     height: 0;
     padding-bottom: calc(100% / (var(--aspect-ratio)));
-  }
+}
 
 .project {
     width: 100%;
@@ -411,3 +411,220 @@ footer {
 /*++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++*/
 /*++++++++++++++++++++*/
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++ RESPONSIVE+++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*++++++++++++++++++++++++++++++++++++++++++ XS (PHONES) ++++++++++++++++++++++++++++++++++++++++++*/
+
+
+@media (max-width: 640px) { 
+    .heading {
+        font-size: var(--font-lg);
+        font-weight: 800;
+        color: var(--text-primary);
+        margin: 1rem;
+        text-align: center;
+    }
+
+    /* NAVIGATION */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .top-navigation {
+        position: sticky;
+        top: 0;
+        background-color: var(--white);
+        z-index: 100;
+        padding: 1rem;
+    }
+    
+    .top-navigation .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .top-navigation .nav-brand .name-link {
+        display: none;
+    }
+    
+    .top-navigation .nav-brand .logo-link {
+        display: flex;
+        max-width: 4rem;
+        align-items: center;
+        cursor: pointer;
+        height: 100%;
+    }
+    
+    .top-navigation .nav-links {
+        display: flex;
+    }
+    
+    .top-navigation .nav-link {
+        padding: 1rem;
+        display: block;
+        border-radius: 5px;
+        font-size: var(--font-sd);
+        cursor: pointer;
+        font-weight: 500;
+    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* NAVIGATION */
+    
+    
+    
+    
+    /* INTRO */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .intro {
+        text-align: center;
+        font-size: var(--font-sd);
+        padding: 3rem 2rem;
+        margin: 0;
+    }
+    
+    .intro .emoji {
+        font-size: var(--font-lg);
+    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* INTRO */
+    
+    /* PROJECTS */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: start;
+        background-color: black;
+    }
+    
+    .projects-grid > [style^='--aspect-ratio']::before {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 0;
+        padding-bottom: calc(100% / (var(--aspect-ratio)));
+    }
+    
+    .project {
+        width: 100%;
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: .1s ease-in-out;
+        position: relative;
+    }
+    
+    .project .project-heading {
+        position: absolute;
+        box-sizing: border-box;
+        padding: 2rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    
+        width: 100%;
+        height: 100%;
+        color: var(--white);
+    
+        opacity: 1;
+        transition: .15s ease-in-out;
+    }
+    
+    .project .project-heading.show {
+        opacity: 1;
+    }
+    
+    .project-heading .title { 
+        font-size: var(--font-xl);
+        font-weight: 700;
+        user-select: none;
+    }
+    
+    .project-heading .title::after {
+        content: '';
+        width: 20%;
+        height: 5px;
+        background: var(--accent-blue);
+        display: block;
+    }
+    
+    .project-heading .description { 
+        font-size: var(--font-sd);
+        font-weight: 500;
+        user-select: none;
+    }
+    
+    .stretched-link {
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .stretched-link::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: auto;
+        content: "";
+        background-color: rgba(0,0,0,0);
+    }
+    
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        opacity: 0.4;
+        transition: .15s ease-in-out;
+        z-index: 0;
+    }
+    
+    .overlay.show {
+        opacity: 0.4;
+    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* PROJECTS */
+
+    /* ABOUT */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .about-grid {
+        display: block;
+    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* ABOUT */
+}
+
+/*++++++++++++++++++++++++++++++++++++++ END SM (PHONES) ++++++++++++++++++++++++++++++++++++++++++*/
+  

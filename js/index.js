@@ -1,5 +1,6 @@
 var navigation = document.getElementById("navigation");
 var projects_grid = document.getElementById("projects");
+var projects_heading = document.getElementById("projects_heading");
 var about_page = document.getElementById("about");
 var contact_page = document.getElementById("contact");
 
@@ -29,7 +30,7 @@ navigation.addEventListener('click', function (event) {
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
     if (event.target.matches('#work_link')) {
-        projects_grid.scrollIntoView({ behavior: 'smooth', block: 'end'});
+        projects_heading.scrollIntoView({ behavior: 'smooth', block: 'end'});
     }
     if (event.target.matches('#about_link')) {
         about_page.scrollIntoView({ behavior: 'smooth', block: 'end'});
