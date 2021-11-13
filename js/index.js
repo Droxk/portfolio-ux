@@ -57,6 +57,7 @@ navigation.addEventListener('click', function (event) {
 mobile_navigation.addEventListener('click', function (event) {
     var mobile_menu = document.getElementById("mobile_menu");
     var toggle_menu = document.getElementById("toggle_menu");
+    
 
     if (event.target.matches('#work_link_mb')) {
         work_page.scrollIntoView({ behavior: 'smooth', block: 'start'});

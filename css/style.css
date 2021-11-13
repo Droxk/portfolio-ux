@@ -30,6 +30,7 @@
     --animate-duration: .15s;
 }
 
+
 main.content {
     animation: fadeInAnimation ease .7s;
     animation-iteration-count: 1;
