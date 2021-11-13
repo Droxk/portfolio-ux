@@ -10,6 +10,10 @@
     --accent-blue-dark: #cae2f1;
     --white: #FFFFFF;
     --grey: #E0E0E0;
+    --bg-orange: rgba(245, 158, 11, .7);
+    --bg-green: rgba(52, 211, 153, .7);
+    --bg-teal: rgba(59, 130, 246, .7);
+    --bg-purple: rgba(139, 92, 246, .7);
 
     /* Font sizes */
     --font-sm: 0.8rem;
@@ -20,8 +24,14 @@
     --font-xxl: 4rem;
 }
 
-body {
-    animation: fadeInAnimation ease .85s;
+/* Animations */
+#toggle_menu,
+#mobile_menu {
+    --animate-duration: .15s;
+}
+
+main.content {
+    animation: fadeInAnimation ease .7s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     color: var(--text-primary);
@@ -81,6 +91,46 @@ a {
 .shadow {
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
+
+.stretched-link {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+}
+
+.bg-orange {
+    background-color: var(--bg-orange);
+}
+.bg-green {
+    background-color: var(--bg-green);
+}
+.bg-teal {
+    background-color: var(--bg-teal);
+}
+.bg-purple {
+    background-color: var(--bg-purple);
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
 /*++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++*/
@@ -103,11 +153,20 @@ a {
     align-items: center;
 }
 
+.toggle-menu {
+    display: none;
+    cursor: pointer;
+}
+
 .logo-link {
     width: 4rem;
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+.logo-link img {
+    border-radius: 100%;
 }
 
 .nav-brand {
@@ -165,101 +224,64 @@ a {
 /* WORK SECTION */
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: start;
-    background-color: black;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
-
-.projects-grid > [style^='--aspect-ratio']::before {
-    content: "";
-    display: inline-block;
-    width: 1px;
-    height: 0;
-    padding-bottom: calc(100% / (var(--aspect-ratio)));
-  }
 
 .project {
-    width: 100%;
-    background-color: gray;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: .1s ease-in-out;
     position: relative;
+    height: 25rem;
+    overflow: hidden;
+    border-radius: 1rem;
 }
 
-.project .project-heading {
+.project img {
     position: absolute;
-    box-sizing: border-box;
-    padding: 2rem 2.5rem;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+}
+
+.project .stretched-link {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-
-    width: 100%;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
     color: var(--white);
-
-    opacity: 0;
-    transition: .15s ease-in-out;
 }
 
-.project .project-heading.show {
-    opacity: 1;
+.project .stretched-link:hover .project-description {
+    margin-bottom: 4rem;
 }
 
-.project-heading .title { 
+.project-heading {
     font-size: var(--font-xl);
     font-weight: 700;
-    user-select: none;
+    transition: 10ms ease-in-out;
+    padding: 0 1rem;
 }
 
-.project-heading .title::after {
-    content: '';
-    width: 20%;
-    height: 5px;
-    background: var(--accent-blue);
-    display: block;
-}
-
-.project-heading .description { 
-    font-size: var(--font-sd);
-    font-weight: 500;
-    user-select: none;
-}
-
-.stretched-link {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.stretched-link::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    pointer-events: auto;
+.project-heading::after {
     content: "";
-    background-color: rgba(0,0,0,0);
+    display: block;
+    height: 5px;
+    width: 20%;
+    background-color: var(--white);
+    margin: .75rem auto;
 }
 
-.overlay {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    transition: .15s ease-in-out;
-    z-index: 0;
-}
-
-.overlay.show {
-    opacity: 0.4;
+.project-description {
+    text-align: center;
+    font-size: var(--font-sd);
+    font-weight: 600;
+    transition: .3s ease-in-out;
+    padding: 0 1rem;
 }
 /*++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++*/
@@ -277,7 +299,6 @@ a {
 }
 
 .picture {
-    max-width: 400px;
     display: block;
 }
 
@@ -411,3 +432,172 @@ footer {
 /*++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++*/
 /*++++++++++++++++++++*/
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++ RESPONSIVE+++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*++++++++++++++++++++++++++++++++++++++++++ XS (PHONES) ++++++++++++++++++++++++++++++++++++++++++*/
+
+
+@media (max-width: 640px) { 
+    .wrapper {
+        margin: 0 1rem;
+    }
+
+    .heading {
+        font-size: var(--font-lg);
+        font-weight: 800;
+        color: var(--text-primary);
+        margin: 1rem;
+        text-align: center;
+    }
+
+    /* NAVIGATION */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .top-navigation {
+        position: sticky;
+        top: 0;
+        background-color: var(--white);
+        z-index: 100;
+        padding: 1rem 0;
+    }
+    
+    .top-navigation .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .top-navigation .nav-brand .name-link {
+        display: none;
+    }
+    
+    .top-navigation .nav-brand .logo-link {
+        display: flex;
+        max-width: 4rem;
+        align-items: center;
+        cursor: pointer;
+        height: 100%;
+    }
+    
+    .top-navigation .nav-links {
+        display: none;
+    }
+
+    .mobile-navigation {
+        position: fixed;
+        z-index: 999;
+        bottom: 5rem;
+        right: 1.5rem;
+    }
+
+    .toggle-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--white);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+        border-radius: 100%;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 4.4rem;
+    }
+
+    .toggle-icon {
+        width: 3rem;
+        pointer-events: none;
+    }
+
+    .mobile-navigation .nav-links-mobile {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    .mobile-navigation .nav-links-mobile li {
+        text-align: center;
+        background-color: var(--white);
+        border-radius: 2rem;
+        margin-top: 1rem;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* NAVIGATION */
+    
+    /* WORK */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* WORK */
+    
+    
+    /* INTRO */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .intro {
+        text-align: center;
+        font-size: var(--font-sd);
+        padding: 3rem 2rem;
+        margin: 0;
+    }
+    
+    .intro .emoji {
+        font-size: var(--font-lg);
+    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* INTRO */
+    
+    /* PROJECTS */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* PROJECTS */
+
+    /* ABOUT */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .about-grid {
+        display: block;
+    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* ABOUT */
+}
+
+/*++++++++++++++++++++++++++++++++++++++ END SM (PHONES) ++++++++++++++++++++++++++++++++++++++++++*/
+  

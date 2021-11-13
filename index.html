@@ -8,181 +8,165 @@
 
     <title>Diego Villaverde - UX Designer</title>
 
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- NAVIGATION -->
-    <nav class="top-navigation" id="navigation">
-        <div class="wrapper">
-            <div class="nav-brand">
-                <a class="logo-link"><img id="logo_link" class="img-responsive" src="./img/logo.png" alt="Logo formado por elipses solapadas"></a>
-                <a id="name_link" class="name-link">Diego Villaverde</a>
+    <main class="content">
+        <!-- NAVIGATION -->
+        <nav class="top-navigation" id="navigation">
+            <div class="wrapper">
+                <div class="nav-brand">
+                    <a class="logo-link"><img id="logo_link" class="img-responsive" src="./img/logo.jpg" alt="Logo formado por elipses solapadas"></a>
+                    <a id="name_link" class="name-link">Diego Villaverde</a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a id="work_link" class="nav-link active">Work</a></li>
+                    <li><a id="about_link" class="nav-link">About</a></li>
+                    <li><a id="contact_link" class="nav-link">Contact</a></li>
+                </ul>
             </div>
-            
-            <ul class="nav-links">
-                <li><a id="work_link" class="nav-link active">Work</a></li>
-                <li><a id="about_link" class="nav-link">About</a></li>
-                <li><a id="contact_link" class="nav-link">Contact</a></li>
+        </nav>
+        <nav class="mobile-navigation" id="mobile_navigation">
+            <ul class="nav-links-mobile hide" id="mobile_menu">
+                <li><a id="work_link_mb" class="nav-link">Work</a></li>
+                <li><a id="about_link_mb" class="nav-link">About</a></li>
+                <li><a id="contact_link_mb" class="nav-link">Contact</a></li>
             </ul>
-        </div>
-        
-    </nav>
-
-    <div class="wrapper">
-        <!-- INTRO SECTION -->
-        <div class="intro">
-            &#128075;
-            <p><span class="highlight">Diseñador UX</span> con ámplios conocimientos en programación web. Situar al usuario como foco del diseño y asegurar una experiencia placentera son pilares esenciales en mis diseños.</p>
-        </div>
-    </div>
-
-    <div class="wrapper">    
-        <!-- WORK SECTION -->
-        <h2 class="heading">Projects</h2>
-
-        <div class="projects-grid" id="projects">
-            <div class="project" 
-                style="background-image: url(./img/dashboard.jpg);">
-                <a class="stretched-link" href="#1">
-                    <div class="project-heading">
-                        <span class="title">Coinfy: Consistency</span>
-                        <p class="description">Explore the uses of consistency in the process of designing UX</p>
-                    </div>
-                </a>
-                <div class="overlay"></div>
-            </div>
-            <div class="project" 
-                style="background-image: url(./img/lightbulb.jpg);">
-                <a class="stretched-link" href="#2">
-                    <div class="project-heading">
-                        <span class="title">Energoal</span>
-                        <p class="description">User-Centered Design / Advanced UX/UI</p>
-                    </div>
-                </a>
-                <div class="overlay"></div>
-            </div>
-            <div class="project" 
-                style="background-image: url(./img/media.jpg);">
-                <a class="stretched-link" href="#3">
-                    <div class="project-heading">
-                        <span class="title">Medycal</span>
-                        <p class="description">The importance of usability in a modern user interface</p>
-                    </div>
-                </a>
-                <div class="overlay"></div>
-            </div>
-            <div class="project" 
-                style="background-image: url(./img/analytics.jpg);">
-                <a class="stretched-link" href="#4">
-                    <div class="project-heading">
-                        <span class="title">Blog: Analytics</span>
-                        <p class="description">Learn how to enhance your UX Design process with analytics</p>
-                    </div>
-                </a>
-                <div class="overlay"></div>
-            </div>
-            <div class="project" 
-                style="background-image: url(./img/graphics.jpg);">
-                <a class="stretched-link" href="#5">
-                    <div class="project-heading">
-                        <span class="title">Remednum</span>
-                        <p class="description">A well designed UI focused on data and performance</p>
-                    </div>
-                </a>
-                <div class="overlay"></div>
-            </div>
-            <div class="project" 
-                style="background-image: url(./img/geometry.jpg);">
-                <a class="stretched-link" href="#6">
-                    <div class="project-heading">
-                        <span class="title"> Video: Futuremet</span>
-                        <p class="description">Public talk about designing UX for accesibility and equity</p>
-                    </div>
-                </a>
-                <div class="overlay"></div>
-            </div>
-        </div>         
-    </div>
-
-    <section class="about-section" id="about">
-        <div class="wrapper">
-            <h2 class="heading">About</h2>
-
-            <div class="about-grid">
-                <div class="picture-area">
-                    <img class="img-responsive picture" src="./img/IMG_20210805_180704.jpg" alt="">
-                </div>
-                <div class="info-area">
-                    <h3>Diego Villaverde</h3>
-                    <p>Soy un Diseñador UX decidido a ofrecer una experiencia centrada en el usuario a través de las buenas prácticas y del uso del framework <span class="bold">UCD</span> (User-centered Design).</p>
-                    <p>Algunos de mis hobbys incluyen:</p>
-
-                    <ul>
-                        <li>- Desarrollo de videojuegos en <span class="bold">Godot Engine</span></li>
-                        <li>- Desarrollo <span class="bold">Web</span></li>
-                        <li>- <span class="bold">Arte</span> Digital</li>
-                        <li>- Proyectos con <span class="bold">teclados mecánicos</span> personalizados a medida</li>
-                    </ul>
-                </div>
-                <div class="details-area">
-                    <div class="education">
-                        <h3>Education</h3>
-                    </div>
-                    <div class="experience">
-                        <h3>Experience</h3>
-                    </div>
-                    <div class="design">
-                        <h3>Design skills</h3>
-                    </div>
-                    <div class="technical">
-                        <h3>Technical skills</h3>
-                    </div>
-                </div>
-            </div>
-
-            
-        </div>
-    </section>
-
-    <section class="contact-section" id="contact">
-        <div class="wrapper">
-            <h2 class="heading">Contact</h2>
-
-            <div class="about-grid">
-                <div class="picture-area">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et gravida leo. Morbi ultricies dui in enim iaculis, eget laoreet quam porttitor. Morbi velit lorem, fermentum vitae blandit eu, viverra nec tortor. Nam vel nisl id magna hendrerit tincidunt et et orci. Ut sit amet condimentum est. Phasellus scelerisque tempor dolor, in pellentesque lorem. Vestibulum posuere congue ultricies. Morbi a pellentesque nibh, sit amet efficitur odio. Sed mollis ligula quis laoreet suscipit. Cras mollis, dolor in facilisis ultrices, orci quam venenatis eros, ut congue mauris urna vel odio. Nunc volutpat ut tellus a rhoncus. Maecenas ac magna mollis, laoreet arcu iaculis, varius enim. Duis quis turpis mollis, fringilla orci non, aliquam arcu. Suspendisse malesuada condimentum velit, pulvinar lacinia metus accumsan eu. 
-                </div>
-                <div class="info-area">
-                    <p>Diseñador UX con ámplios conocimientos en programación web. Situar al usuario como foco del diseño y asegurar una experiencia placentera son pilares esenciales en mis diseños.</p>
-                </div>
-                <div class="details-area">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et gravida leo. Morbi ultricies dui in enim iaculis, eget laoreet quam porttitor. Morbi velit lorem, fermentum vitae blandit eu, viverra nec tortor. Nam vel nisl id magna hendrerit tincidunt et et orci. Ut sit amet condimentum est. Phasellus scelerisque tempor dolor, in pellentesque lorem. Vestibulum posuere congue ultricies. Morbi a pellentesque nibh, sit amet efficitur odio. Sed mollis ligula quis laoreet suscipit. Cras mollis, dolor in facilisis ultrices, orci quam venenatis eros, ut congue mauris urna vel odio. Nunc volutpat ut tellus a rhoncus. Maecenas ac magna mollis, laoreet arcu iaculis, varius enim. Duis quis turpis mollis, fringilla orci non, aliquam arcu. Suspendisse malesuada condimentum velit, pulvinar lacinia metus accumsan eu. 
-                </div>
-            </div>
-
-            
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="wrapper">
-            <span class="personal-info">
-                &copy; Diego Villaverde Prado 2021 |
-                <a href="mailto:dvillaverdeprado@gmail.com">dvillaverdeprado@gmail.com</a>
+            <span class="toggle-menu" id="toggle_menu">
+                <svg xmlns="http://www.w3.org/2000/svg" id="toggle_icon" class="toggle-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+                </svg>
             </span>
-            <ul class="social-links">
-                <li><a href="#"><img src="./img/icons/linkedin.svg" alt="icono linkedin"></a></li>
-                <li><a href="#"><img src="./img/icons/at-sign.svg" alt="icono arroba"></a></li>
-                <li><a href="#"><img src="./img/icons/twitter.svg" alt="icono twitter"></a></li>
-            </ul>
-        </div>
-    </footer>
-    
+        </nav>
 
-    <script src="./js/index.js"></script> 
+        <div class="wrapper">
+            <!-- INTRO SECTION -->
+            <div class="intro">
+                <span class="emoji">&#128075;</span>
+                <p><span class="highlight">Diseñador UX</span> con ámplios conocimientos en programación web. Situar al usuario como foco del diseño y asegurar una experiencia placentera son pilares esenciales en mis diseños.</p>
+            </div>
+        </div>
+
+        <section class="work-section" id="work">
+            <div class="wrapper">
+                <h2 class="heading">Work</h2>
+
+                <div class="projects-grid">
+                    <div class="project">
+                        <img src="./img/dashboard.jpg" alt="">
+                        <a href="#" class="stretched-link bg-orange">
+                            <span class="project-heading">Coinfy: Consistency</span>
+                            <span class="project-description">Explore the uses of consistency in the process of designing UX</span>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <img src="./img/lightbulb.jpg" alt="">
+                        <a href="#" class="stretched-link bg-green">
+                            <span class="project-heading">Medycal</span>
+                            <span class="project-description">The importance of usability in a modern user interface</span>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <img src="./img/analytics.jpg" alt="">
+                        <a href="#" class="stretched-link bg-teal">
+                            <span class="project-heading">Remednum</span>
+                            <span class="project-description">A well designed UI focused on data and performance</span>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <img src="./img/geometry.jpg" alt="">
+                        <a href="#" class="stretched-link bg-purple">
+                            <span class="project-heading">Futuremet</span>
+                            <span class="project-description">Public talk about designing UX for accesibility and equity</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="wrapper">
+                <h2 class="heading">About</h2>
+
+                <div class="about-grid">
+                    <div class="picture-area">
+                        <img class="img-responsive picture" src="./img/IMG_20210805_180704.jpg" alt="">
+                    </div>
+                    <div class="info-area">
+                        <h3>Diego Villaverde</h3>
+                        <p>Diego es conocido por sus soluciones creativas en sus diseños y el cuidado por lo estético durante todo el proceso de creación. Disfruta volcando todos sus esfuerzos en lograr un diseño pulido, robusto y de calidad.</p>
+                        <!-- <p>Algunos de mis hobbys incluyen:</p>
+
+                        <ul>
+                            <li>- Desarrollo de videojuegos en <span class="bold">Godot Engine</span></li>
+                            <li>- Desarrollo <span class="bold">Web</span></li>
+                            <li>- <span class="bold">Arte</span> Digital</li>
+                            <li>- Proyectos con <span class="bold">teclados mecánicos</span> personalizados a medida</li>
+                        </ul> -->
+                    </div>
+                    <div class="details-area">
+                        <div class="education">
+                            <h3>Education</h3>
+                        </div>
+                        <div class="experience">
+                            <h3>Experience</h3>
+                        </div>
+                        <div class="design">
+                            <h3>Design skills</h3>
+                        </div>
+                        <div class="technical">
+                            <h3>Technical skills</h3>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="wrapper">
+                <h2 class="heading">Contact</h2>
+
+                <div class="about-grid">
+                    <div class="picture-area">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et gravida leo. Morbi ultricies dui in enim iaculis, eget laoreet quam porttitor. Morbi velit lorem, fermentum vitae blandit eu, viverra nec tortor. Nam vel nisl id magna hendrerit tincidunt et et orci. Ut sit amet condimentum est. Phasellus scelerisque tempor dolor, in pellentesque lorem. Vestibulum posuere congue ultricies. Morbi a pellentesque nibh, sit amet efficitur odio. Sed mollis ligula quis laoreet suscipit. Cras mollis, dolor in facilisis ultrices, orci quam venenatis eros, ut congue mauris urna vel odio. Nunc volutpat ut tellus a rhoncus. Maecenas ac magna mollis, laoreet arcu iaculis, varius enim. Duis quis turpis mollis, fringilla orci non, aliquam arcu. Suspendisse malesuada condimentum velit, pulvinar lacinia metus accumsan eu. 
+                    </div>
+                    <div class="info-area">
+                        <p>Diseñador UX con ámplios conocimientos en programación web. Situar al usuario como foco del diseño y asegurar una experiencia placentera son pilares esenciales en mis diseños.</p>
+                    </div>
+                    <div class="details-area">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et gravida leo. Morbi ultricies dui in enim iaculis, eget laoreet quam porttitor. Morbi velit lorem, fermentum vitae blandit eu, viverra nec tortor. Nam vel nisl id magna hendrerit tincidunt et et orci. Ut sit amet condimentum est. Phasellus scelerisque tempor dolor, in pellentesque lorem. Vestibulum posuere congue ultricies. Morbi a pellentesque nibh, sit amet efficitur odio. Sed mollis ligula quis laoreet suscipit. Cras mollis, dolor in facilisis ultrices, orci quam venenatis eros, ut congue mauris urna vel odio. Nunc volutpat ut tellus a rhoncus. Maecenas ac magna mollis, laoreet arcu iaculis, varius enim. Duis quis turpis mollis, fringilla orci non, aliquam arcu. Suspendisse malesuada condimentum velit, pulvinar lacinia metus accumsan eu. 
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="wrapper">
+                <span class="personal-info">
+                    &copy; Diego Villaverde Prado 2021 |
+                    <a href="mailto:dvillaverdeprado@gmail.com">dvillaverdeprado@gmail.com</a>
+                </span>
+                <ul class="social-links">
+                    <li><a href="#"><img src="./img/icons/linkedin.svg" alt="icono linkedin"></a></li>
+                    <li><a href="#"><img src="./img/icons/at-sign.svg" alt="icono arroba"></a></li>
+                    <li><a href="#"><img src="./img/icons/twitter.svg" alt="icono twitter"></a></li>
+                </ul>
+            </div>
+        </footer>
+
+
+        <script src="./js/index.js"></script> 
+    </main>
+    
 </body>
 </html>
