@@ -489,6 +489,13 @@ footer {
     .top-navigation .nav-links {
         display: none;
     }
+    .top-navigation .nav-link {
+        transition: none;
+    }
+    .nav-link:hover,
+    .nav-link:active {
+        background: none;
+    }
 
     .mobile-navigation {
         position: fixed;
