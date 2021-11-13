@@ -218,7 +218,6 @@ a {
 .intro {
     text-align: left;
     font-size: var(--font-lg);
-    padding: 0 10rem;
     margin: 10rem 0;
 }
 
