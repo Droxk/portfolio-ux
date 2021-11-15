@@ -306,6 +306,8 @@ a {
 .picture {
     display: block;
     border-radius: 1rem;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .about-grid {
@@ -331,6 +333,12 @@ a {
     margin: 0;
     margin-bottom: 1rem;
 }
+
+.info-area .emoji {
+    font-size: var(--font-xl);
+    text-align: center;
+    margin-bottom: 4rem;
+}
 /*++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++*/
@@ -341,6 +349,69 @@ a {
 /* CONTACT SECTION */
 .contact-section {
     margin-bottom: 10rem;
+}
+
+#fs-frm {
+    margin: 0 2rem;
+}
+
+#fs-frm-inputs {
+    border: none;
+    padding: 0;
+}
+
+#fs-frm-inputs .input-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+#fs-frm-inputs .input-block input,
+#fs-frm-inputs .input-block textarea {
+    font-family: 'Open Sans', sans-serif;
+    padding: 1rem;
+    font-size: var(--font-sd);
+    
+}
+
+#fs-frm .button {
+    padding: 1rem;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: var(--font-sd);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+}
+
+#fs-frm .button svg {
+    width: 1rem;
+    color: var(--text-primary);
+    margin-left: .3rem;
+}
+
+.info-area {
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-area p {
+    font-size: var(--font-sd);
+    margin-bottom: 0;
+}
+
+.separator {
+    width: 1rem;
+    margin: .5rem auto;
+    color: var(--grey);
 }
 /*++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++*/
@@ -367,7 +438,14 @@ footer {
 
 .footer .personal-info {
     font-size: var(--font-sm);
-    color: var(--text-secondary);
+    color:
+     var(--text-secondary);
+}
+
+.footer .personal-info .email {
+    font-size: var(--font-sm);
+    font-weight: 500;
+    color: var(--text-primary);
 }
 
 .social-links {
@@ -565,14 +643,10 @@ footer {
     .about-grid {
         display: block;
     }
-
-    .info-area {
-        padding: 2rem;
-    }
-
-    .info-area p {
-        font-size: var(--font-sd);
-        margin-bottom: 1rem;
+    
+    .picture {
+        width: 100%;
+        margin: auto;
     }
     /* ++++++++++++++++++++++++++++++++++ */
     /* ++++++++++++++++++++++++++++ */
@@ -580,14 +654,23 @@ footer {
     /* ++++++++++++++ */
     /* ABOUT */
 
+    /* CONTACT */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* CONTACT */
+
     /* FOOTER */
     /* ++++++++++++++ */
     /* +++++++++++++++++++++ */
     /* ++++++++++++++++++++++++++++ */
     /* ++++++++++++++++++++++++++++++++++ */
-    /* footer {
-        display: block;
-    } */
 
     .social-links li a {
         transition: none;

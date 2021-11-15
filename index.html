@@ -105,15 +105,29 @@
                         <img class="img-responsive picture" src="./img/IMG_20210805_180704.jpg" alt="">
                     </div>
                     <div class="info-area">
+                        <div class="emoji">
+                            ☕
+                        </div>
                         <p>
                             Me llamo Diego Villaverde. Siempre busco nuevas formas de poner en práctica mi creatividad. Algunos de mis intereses van desde escribir y dibujar, hasta la programación de aplicaciones web y videojuegos. 
                         </p>
+                        <div class="separator">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
                         <p>
                             Recientemente he descubierto el apasionante mundo del diseño UX. Siendo desarrollador, poseo una serie de aptitudes que resultan de gran utilidad durante el proceso de diseño. Aporto soluciones creativas y valoro enormemente el cuidado por lo estético. El componente artístico es de suma importancia para mí a la hora de diferenciar el producto y siempre esta presente en mis diseños.
                         </p>
+                        <div class="separator">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
                         <p>
                             Si tienes alguna idea que quieras desarrollar, compartir o sobre la que recibir feedback, no dudes en contactar, estaré encantado de ayudar.
                         </p>
+                    
                     </div>
                 </div>
 
@@ -125,9 +139,33 @@
             <div class="wrapper">
                 <h2 class="heading">Contacto</h2>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et gravida leo. Morbi ultricies dui in enim iaculis, eget laoreet quam porttitor. Morbi velit lorem, fermentum vitae blandit eu, viverra nec tortor. Nam vel nisl id magna hendrerit tincidunt et et orci. Ut sit amet condimentum est. Phasellus scelerisque tempor dolor, in pellentesque lorem. Vestibulum posuere congue ultricies. Morbi a pellentesque nibh, sit amet efficitur odio. Sed mollis ligula quis laoreet suscipit. Cras mollis, dolor in facilisis ultrices, orci quam venenatis eros, ut congue mauris urna vel odio. Nunc volutpat ut tellus a rhoncus. Maecenas ac magna mollis, laoreet arcu iaculis, varius enim. Duis quis turpis mollis, fringilla orci non, aliquam arcu. Suspendisse malesuada condimentum velit, pulvinar lacinia metus accumsan eu. 
-                </p>
+                <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xbjqnynj"
+                method="POST">
+                    <fieldset id="fs-frm-inputs">
+                        <div class="input-block">
+                            <label for="full-name">Nombre</label>
+                            <input type="text" name="name" id="full-name" placeholder="Nombre y Apellidos" required="">
+                        </div>
+                      
+                        <div class="input-block">
+                            <label for="email-address">Email</label>
+                            <input type="email" name="_replyto" id="email-address" placeholder="email@ejemplo.com" required="">
+                        </div>
+                      
+                        <div class="input-block">
+                            <label for="message">Mensaje</label>
+                            <textarea rows="5" name="message" id="message" placeholder="Escribe aquí tu mensaje." required=""></textarea>
+                        </div>
+                      
+                        <input type="hidden" name="_subject" id="email-subject" value="Formulario de contacto">
+                    </fieldset>
+                    <button class="button" type="submit">
+                        Enviar 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                          </svg>
+                    </button>
+                </form>
 
                 
             </div>
@@ -137,12 +175,12 @@
             <div class="wrapper">
                 <span class="personal-info">
                     &copy; Diego Villaverde Prado 2021 |
-                    <a href="mailto:dvillaverdeprado@gmail.com">dvillaverdeprado@gmail.com</a>
+                    <span class="email">dvillaverdeprado@gmail.com</span>
                 </span>
                 <ul class="social-links">
-                    <li><a href="#"><img src="./img/icons/linkedin.svg" alt="icono linkedin"></a></li>
-                    <li><a href="#"><img src="./img/icons/at-sign.svg" alt="icono arroba"></a></li>
-                    <li><a href="#"><img src="./img/icons/twitter.svg" alt="icono twitter"></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/diegovp93/"><img src="./img/icons/linkedin.svg" alt="icono linkedin"></a></li>
+                    <li><a target="_blank" href="mailto:dvillaverdeprado@gmail.com"><img src="./img/icons/at-sign.svg" alt="icono arroba"></a></li>
+                    <li><a target="_blank" href="https://twitter.com/DiegoVp93"><img src="./img/icons/twitter.svg" alt="icono twitter"></a></li>
                 </ul>
             </div>
         </footer>
