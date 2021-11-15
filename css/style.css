@@ -520,6 +520,12 @@ footer {
         margin: 1rem 2rem;
     }
 
+    .bullet-dot {
+        width: .5rem;
+        display: inline-block;
+        color: var(--accent-color);
+    }
+
     /* NAVIGATION */
     /* ++++++++++++++ */
     /* +++++++++++++++++++++ */
