@@ -20,6 +20,8 @@
     --font-md: 1.25rem;
     --font-lg: 1.75rem;
     --font-xl: 2rem;
+    --font-xl-sh: 2.5rem;
+    --font-xl-mh: 3.5rem;
     --font-xxl: 4rem;
 }
 
@@ -68,7 +70,7 @@ a {
 }
 
 .wrapper {
-    max-width: 1320px;
+    max-width: 90rem;
     margin: 0 auto;
 }
 
@@ -228,6 +230,10 @@ a {
     margin: 10rem 0;
 }
 
+.intro h1 {
+    font-size: var(--font-xl-mh);
+}
+
 .intro .emoji {
     font-size: 3rem;
 }
@@ -336,11 +342,10 @@ a {
 .info-area .emoji {
     font-size: var(--font-xl);
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .info-area {
-    padding: 2rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -505,8 +510,131 @@ footer {
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-/*++++++++++++++++++++++++++++++++++++++++++ XS (PHONES) ++++++++++++++++++++++++++++++++++++++++++*/
 
+/*++++++++++++++++++++++++++++++++++++++++++ LG (DESKTOP) +++++++++++++++++++++++++++++++++++++++++*/
+@media (max-width: 1536px) { 
+    .wrapper {
+        margin: 0 2rem;
+        padding: 0 2rem;
+    }
+}
+/*++++++++++++++++++++++++++++++++++++++++++ MD (TABLETS) +++++++++++++++++++++++++++++++++++++++++*/
+@media (max-width: 1280px) { 
+    .wrapper {
+        margin: 0 2rem;
+        padding: 0;
+    }
+
+    .heading {
+        font-size: var(--font-xl-sh);
+        margin: 2.5rem 0;
+    }
+
+    /* NAVIGATION */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .top-navigation .nav-brand .name-link {
+        font-size: var(--font-md);
+        padding-left: 1rem;
+    }
+
+    .top-navigation .nav-link {
+        font-size: var(--font-sd);
+        padding: .75rem 0.8rem;
+        margin: 0 .2rem;
+    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* NAVIGATION */
+
+    /* INTRO */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .intro {
+        font-size: var(--font-md);
+        margin: 6rem 0;
+    }
+    .intro .emoji {
+        font-size: 2.3rem;
+    }
+
+    .intro h1 {
+        font-size: var(--font-xl-sh);
+    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* INTRO */
+
+    /* PROJECTS */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .project {
+        height: 20rem;
+    }
+
+    .project-heading {
+        font-size: var(--font-lg);
+    }
+
+    .project-description {
+        padding: 0 3rem;
+    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* PROJECTS */
+
+    /* ABOUT */
+    /* ++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++++++++ */
+    .about-section {
+        padding-top: 3rem;
+    }
+
+    .info-area .emoji {
+        margin-bottom: 2rem;
+    }
+
+    .picture-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .picture {
+        width: 100%;
+    }
+    /* ++++++++++++++++++++++++++++++++++ */
+    /* ++++++++++++++++++++++++++++ */
+    /* +++++++++++++++++++++ */
+    /* ++++++++++++++ */
+    /* ABOUT */
+    
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++ XS (PHONES) ++++++++++++++++++++++++++++++++++++++++++*/
+@media (max-width: 768px) { 
+    .about-grid {
+        display: block;
+    }
+
+    .info-area {
+        padding: 2rem 0;
+    }
+}
 
 @media (max-width: 640px) { 
     .wrapper {
