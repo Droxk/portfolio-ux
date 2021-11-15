@@ -807,6 +807,10 @@ footer {
         margin: auto;
     }
 
+    .info-area {
+        padding: 2rem;
+    }
+
     .info-area .emoji {
         font-size: var(--font-lg);
         text-align: center;
